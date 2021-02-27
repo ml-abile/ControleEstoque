@@ -1,0 +1,41 @@
+unit UfrmCadastroBaixaEstoque;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UFrmCadastroPadrao, Data.DB,
+  System.Actions, Vcl.ActnList, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
+  Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TFrmCadastroPadrao1 = class(TFrmCadastroPadrao)
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    spbProdutos: TSpeedButton;
+    procedure spbProdutosClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCadastroPadrao1: TFrmCadastroPadrao1;
+
+implementation
+
+{$R *.dfm}
+
+uses DM_Principal, UFrmPesquisaProdutos;
+
+procedure TFrmCadastroPadrao1.spbProdutosClick(Sender: TObject);
+begin
+  Application.CreateForm(TFrmPesquisaProdutos, FrmPesquisaProdutos);
+  FrmPesquisaProdutos.ShowModal;
+  inherited;
+end;
+
+end.

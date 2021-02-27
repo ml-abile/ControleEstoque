@@ -1,0 +1,83 @@
+inherited FrmPesquisaProdutos: TFrmPesquisaProdutos
+  ClientHeight = 312
+  ClientWidth = 706
+  ExplicitWidth = 706
+  ExplicitHeight = 312
+  PixelsPerInch = 96
+  TextHeight = 21
+  inherited Panel1: TPanel
+    Width = 706
+    Caption = '       Produto'
+    ExplicitWidth = 706
+    inherited BtnFechar: TButton
+      Left = 649
+      ExplicitLeft = 649
+    end
+    inherited BtnMinimizar: TButton
+      Left = 597
+      ExplicitLeft = 597
+    end
+    inherited Button2: TButton
+      Left = 539
+      ExplicitLeft = 539
+    end
+  end
+  inherited Panel2: TPanel
+    Top = 298
+    Width = 706
+    ExplicitTop = 298
+    ExplicitWidth = 706
+  end
+  inherited PnlPesquisa: TPanel
+    Width = 706
+    Height = 19
+    Visible = False
+    ExplicitTop = 70
+    ExplicitWidth = 706
+    ExplicitHeight = 19
+  end
+  inherited DBGrid1: TDBGrid
+    Top = 89
+    Width = 706
+    Height = 209
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'NomeProduto'
+        Width = 300
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Descricao'
+        Width = 220
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Qtde'
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Venda'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'IdTipo'
+        Visible = False
+      end>
+  end
+  inherited ActionList1: TActionList
+    Left = 435
+    Top = 17
+  end
+  inherited dts: TDataSource
+    DataSet = DmDados.qryProduto
+    Left = 507
+    Top = 17
+  end
+end

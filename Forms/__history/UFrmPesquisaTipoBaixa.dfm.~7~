@@ -1,0 +1,66 @@
+inherited frmPesquisaTipoBaixa: TfrmPesquisaTipoBaixa
+  Caption = 'frmPesquisaTipoBaixa'
+  ClientHeight = 203
+  ClientWidth = 700
+  ExplicitWidth = 700
+  ExplicitHeight = 203
+  PixelsPerInch = 96
+  TextHeight = 21
+  inherited Panel1: TPanel
+    Width = 700
+    Caption = '       Tipos de Baixa'
+    inherited BtnImprimir: TButton
+      Left = 537
+      Top = 14
+      ExplicitLeft = 539
+      ExplicitTop = 14
+    end
+    inherited BtnAlterar: TButton
+      Left = 641
+      Top = 14
+      ExplicitLeft = 643
+      ExplicitTop = 14
+    end
+    inherited BtnIncluir: TButton
+      Left = 589
+      Top = 11
+      Height = 46
+      ExplicitLeft = 591
+      ExplicitTop = 11
+      ExplicitHeight = 46
+    end
+  end
+  inherited Panel2: TPanel
+    Top = 189
+    Width = 700
+  end
+  inherited PnlPesquisa: TPanel
+    Width = 700
+    Height = 0
+    ExplicitWidth = 702
+    ExplicitHeight = 0
+  end
+  inherited DBGrid1: TDBGrid
+    Top = 70
+    Width = 700
+    Height = 119
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'BAIXA_TIPO_ID'
+        Title.Caption = 'C'#243'digo'
+        Width = 60
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TIPO'
+        Title.Caption = 'Tipo'
+        Width = 615
+        Visible = True
+      end>
+  end
+  inherited dts: TDataSource
+    DataSet = Tabelas.qryBaixa_Tipos
+  end
+end

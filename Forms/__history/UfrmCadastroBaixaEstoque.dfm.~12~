@@ -1,0 +1,196 @@
+inherited frmCadastroBaixaEstoque: TfrmCadastroBaixaEstoque
+  Caption = 'frmCadastroBaixaEstoque'
+  ClientHeight = 372
+  ClientWidth = 580
+  ExplicitWidth = 580
+  ExplicitHeight = 372
+  PixelsPerInch = 96
+  TextHeight = 21
+  inherited Panel1: TPanel
+    Width = 580
+    Caption = '       Baixa de Estoque'
+    ExplicitWidth = 580
+    inherited BtnExcluir: TButton
+      Left = 523
+      ExplicitLeft = 523
+    end
+    inherited BtnCancelar: TButton
+      Left = 471
+      ExplicitLeft = 471
+    end
+    inherited BtnSalvar: TButton
+      Left = 419
+      ExplicitLeft = 419
+    end
+  end
+  inherited PnlDados: TPanel
+    Width = 580
+    Height = 288
+    ExplicitWidth = 600
+    ExplicitHeight = 231
+    object Label1: TLabel
+      Left = 10
+      Top = 76
+      Width = 56
+      Height = 21
+      Caption = 'Produto'
+      FocusControl = DBEdit1
+    end
+    object Label2: TLabel
+      Left = 123
+      Top = 76
+      Width = 67
+      Height = 21
+      Caption = 'Descri'#231#227'o'
+      FocusControl = DBEdit2
+    end
+    object spbProdutos: TSpeedButton
+      Left = 91
+      Top = 103
+      Width = 29
+      Height = 27
+      Flat = True
+      Glyph.Data = {
+        42040000424D4204000000000000420000002800000010000000100000000100
+        20000300000000040000000000000000000000000000000000000000FF0000FF
+        0000FF0000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000CCCCBB0FDACBC7450000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000D9CFC61BDACCC6FFD9CA
+        C352000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000D8D0C821DACC
+        C6FFD9CAC3520000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000000000D8D0
+        C821DACCC6FFD9CAC35200000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000D8D0C821DACCC6FFD9CAC352000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000D8D0C821DACCC6FFD9CAC3520000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000D8D0C821DACCC6FFD7C4C41A00000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000DACBC423DACCC6FFD6CBC11900000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000DACBC423DACCC6FFDBCBC84F0000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000DACBC423DACCC6FFDBCBC84F000000000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000000000DACB
+        C423DACCC6FFDBCBC84F00000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000DACBC423DACC
+        C6FFDBCBC84F0000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000DAD1C81CDACCC6FFDBCB
+        C84F000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000DAC8C80ED8C9C5430000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000}
+      OnClick = spbProdutosClick
+    end
+    object Label3: TLabel
+      Left = 10
+      Top = 11
+      Width = 50
+      Height = 21
+      Caption = 'C'#243'digo'
+      FocusControl = DBEdit3
+    end
+    object Label4: TLabel
+      Left = 106
+      Top = 11
+      Width = 79
+      Height = 21
+      Caption = 'Cadastrado'
+      FocusControl = DBEdit4
+    end
+    object Label5: TLabel
+      Left = 437
+      Top = 76
+      Width = 81
+      Height = 21
+      Caption = 'Quantidade'
+      FocusControl = DBEdit5
+    end
+    object Label6: TLabel
+      Left = 10
+      Top = 141
+      Width = 82
+      Height = 21
+      Caption = 'Observa'#231#227'o'
+      FocusControl = DBEdit2
+    end
+    object DBEdit1: TDBEdit
+      Left = 10
+      Top = 103
+      Width = 81
+      Height = 29
+      DataField = 'PRODUTO_ID'
+      DataSource = dts
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 126
+      Top = 103
+      Width = 286
+      Height = 29
+      CharCase = ecLowerCase
+      DataField = 'DESCRICAO'
+      DataSource = dts
+      Enabled = False
+      TabOrder = 1
+    end
+    object DBEdit3: TDBEdit
+      Left = 10
+      Top = 38
+      Width = 81
+      Height = 29
+      DataField = 'ESTOQUE_MOVIMENTOS_ID'
+      DataSource = dts
+      Enabled = False
+      TabOrder = 2
+    end
+    object DBEdit4: TDBEdit
+      Left = 106
+      Top = 38
+      Width = 167
+      Height = 29
+      DataField = 'CADASTRADO'
+      DataSource = dts
+      TabOrder = 3
+    end
+    object DBEdit5: TDBEdit
+      Left = 437
+      Top = 103
+      Width = 124
+      Height = 29
+      DataField = 'QTDE'
+      DataSource = dts
+      TabOrder = 4
+    end
+    object DBMemo1: TDBMemo
+      Left = 10
+      Top = 168
+      Width = 553
+      Height = 97
+      DataField = 'OBS'
+      DataSource = dts
+      TabOrder = 5
+    end
+  end
+  inherited Panel2: TPanel
+    Top = 358
+    Width = 580
+    ExplicitTop = 358
+    ExplicitWidth = 580
+  end
+  inherited ActionList1: TActionList
+    Left = 304
+    Top = 16
+  end
+  inherited dts: TDataSource
+    DataSet = Tabelas.qryEstoque_Movimentos
+    Left = 344
+    Top = 16
+  end
+end

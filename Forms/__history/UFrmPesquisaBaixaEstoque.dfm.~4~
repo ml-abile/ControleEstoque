@@ -1,0 +1,75 @@
+inherited frmPesquisaBaixaEstoque: TfrmPesquisaBaixaEstoque
+  Caption = 'frmPesquisaBaixaEstoque'
+  ClientHeight = 326
+  ClientWidth = 727
+  ExplicitWidth = 727
+  ExplicitHeight = 326
+  PixelsPerInch = 96
+  TextHeight = 21
+  inherited Panel1: TPanel
+    Width = 727
+    Caption = '       Baixa de Estoque'
+    inherited BtnImprimir: TButton
+      Left = 554
+    end
+    inherited BtnAlterar: TButton
+      Left = 666
+    end
+    inherited BtnIncluir: TButton
+      Left = 606
+    end
+  end
+  inherited Panel2: TPanel
+    Top = 312
+    Width = 727
+  end
+  inherited PnlPesquisa: TPanel
+    Width = 727
+    Height = 11
+    ExplicitHeight = 11
+  end
+  inherited DBGrid1: TDBGrid
+    Top = 81
+    Width = 727
+    Height = 231
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ESTOQUE_MOVIMENTOS_ID'
+        Title.Caption = 'C'#243'digo'
+        Width = 60
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CADASTRADO'
+        Title.Caption = 'Data'
+        Width = 91
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'QTDE'
+        Title.Caption = 'Qtde'
+        Width = 73
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DESCRICAO'
+        Title.Caption = 'Produto'
+        Width = 227
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'OBS'
+        Title.Caption = 'Observa'#231#227'o'
+        Width = 225
+        Visible = True
+      end>
+  end
+  inherited dts: TDataSource
+    DataSet = Tabelas.qryEstoque_Movimentos
+  end
+end

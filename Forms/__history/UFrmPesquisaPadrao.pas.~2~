@@ -1,0 +1,101 @@
+unit UFrmPesquisaPadrao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, DM_Principal, Vcl.StdCtrls, Vcl.ExtCtrls,
+  System.Actions, Vcl.ActnList, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  FireDAC.Comp.Client;
+
+type
+  TFrmPesquisaPadrao = class(TForm)
+    Panel1: TPanel;
+    BtnFechar: TButton;
+    BtnMinimizar: TButton;
+    Panel2: TPanel;
+    Button1: TButton;
+    ActionList1: TActionList;
+    actVoltar: TAction;
+    actIncluir: TAction;
+    actImprmir: TAction;
+    actAlterar: TAction;
+    Button2: TButton;
+    PnlPesquisa: TPanel;
+    DBGrid1: TDBGrid;
+    dts: TDataSource;
+    procedure actVoltarExecute(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure actIncluirExecute(Sender: TObject);
+    procedure actAlterarExecute(Sender: TObject);
+    procedure actImprmirExecute(Sender: TObject);
+  private
+    { Private declarations }
+    SQL : string;
+  public
+    { Public declarations }
+  protected
+    procedure AbreCadastro(); virtual;
+  end;
+
+var
+  FrmPesquisaPadrao: TFrmPesquisaPadrao;
+
+implementation
+
+{$R *.dfm}
+
+uses UFrmMensagem;
+
+procedure TFrmPesquisaPadrao.AbreCadastro;
+begin
+  // - Será programado nos filhos
+end;
+
+procedure TFrmPesquisaPadrao.actAlterarExecute(Sender: TObject);
+begin
+  // Verificação se existem dados para alterar
+  if dts.DataSet.IsEmpty then
+  begin
+    FrmMensagem.Mensagem('Problemas ao Alterar',
+      'Não existem dados para alterar! Selecione um registro ou realize uma pesquisa!',
+      msgErro);
+    Abort;
+  end;
+  dts.DataSet.Edit;
+  AbreCadastro();
+  dts.DataSet.Refresh;
+end;
+
+procedure TFrmPesquisaPadrao.actImprmirExecute(Sender: TObject);
+begin
+  // Mensagem de verificação de dados
+end;
+
+procedure TFrmPesquisaPadrao.actIncluirExecute(Sender: TObject);
+begin
+  dts.DataSet.Append;  // Insere um registro em branco
+  AbreCadastro();
+  dts.DataSet.Refresh; // Atualiza dos dados
+end;
+
+procedure TFrmPesquisaPadrao.actVoltarExecute(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TFrmPesquisaPadrao.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  dts.DataSet.Close;
+  TFDQuery(dts.DataSet).SQL.Clear;
+  TFDQuery(dts.DataSet).SQL.Add(SQL);
+end;
+
+procedure TFrmPesquisaPadrao.FormShow(Sender: TObject);
+begin
+  SQL := TFDQuery(dts.DataSet).SQL.Text;
+  dts.DataSet.Open;
+end;
+
+end.

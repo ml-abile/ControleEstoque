@@ -1,0 +1,49 @@
+inherited frmPesquisaBaixaEstoque: TfrmPesquisaBaixaEstoque
+  Caption = 'frmPesquisaBaixaEstoque'
+  PixelsPerInch = 96
+  TextHeight = 21
+  inherited Panel1: TPanel
+    Caption = '       Baixa de Estoque'
+  end
+  inherited PnlPesquisa: TPanel
+    Height = 19
+    ExplicitHeight = 19
+  end
+  inherited DBGrid1: TDBGrid
+    Top = 89
+    Height = 302
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ESTOQUE_MOVIMENTOS_ID'
+        Title.Caption = 'C'#243'digo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CADASTRADO'
+        Title.Caption = 'Data'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'QTDE'
+        Title.Caption = 'Qtde'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DESCRICAO'
+        Title.Caption = 'Produto'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'OBS'
+        Visible = True
+      end>
+  end
+  inherited dts: TDataSource
+    DataSet = Tabelas.qryEstoque_Movimentos
+  end
+end

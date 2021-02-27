@@ -1,0 +1,49 @@
+unit UFrmPesquisaProdutos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UFrmPesquisaPadrao, Data.DB,
+  System.Actions, Vcl.ActnList, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls,
+  Vcl.ExtCtrls;
+
+type
+  TFrmPesquisaProdutos = class(TFrmPesquisaPadrao)
+    procedure DBGrid1CellClick(Column: TColumn);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  protected
+  procedure AbreCadastro(); override;
+  end;
+
+var
+  FrmPesquisaProdutos: TFrmPesquisaProdutos;
+
+implementation
+
+{$R *.dfm}
+
+uses DM_Principal, UFrmCadastroProdutos, UfrmCadastroBaixaEstoque;
+
+{ TFrmPesquisaProdutos }
+
+procedure TFrmPesquisaProdutos.AbreCadastro;
+begin
+  Application.CreateForm(TFrmCadastroProdutos, FrmCadastroProdutos);
+  FrmCadastroProdutos.ShowModal;
+end;
+
+procedure TFrmPesquisaProdutos.DBGrid1CellClick(Column: TColumn);
+begin
+  FrmPesquisaProdutos.Close;
+  frmCadastroBaixaEstoque.dbedit1.text := DBGrid1.Fields[0].Value;
+  frmCadastroBaixaEstoque.dbedit2.text := DBGrid1.Fields[1].Value;
+  frmCadastroBaixaEstoque.dbedit5.SetFocus;
+
+  inherited;
+end;
+
+end.

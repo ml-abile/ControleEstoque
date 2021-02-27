@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/02/24 20:37:05.000.990,=C:\Users\Moira Luiza\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/24 20:37:38.000.555,C:\Projetos\Zion\Forms\Ufrmprincipal.pas=C:\Users\Moira Luiza\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/24 20:37:38.000.555,C:\Projetos\Zion\Forms\Ufrmprincipal.dfm=C:\Users\Moira Luiza\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/02/24 20:37:53.000.544,C:\Projetos\Zion\Zion.dproj=C:\Users\Moira Luiza\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/02/24 20:38:31.000.092,=C:\Projetos\Zion\Unit1.pas</Transaction>
+    <Transaction>2021/02/24 20:38:56.000.404,C:\Projetos\Zion\Modules\DM_Principal.dfm=C:\Projetos\Zion\Unit1.dfm</Transaction>
+    <Transaction>2021/02/24 20:38:56.000.404,C:\Projetos\Zion\Modules\DM_Principal.pas=C:\Projetos\Zion\Unit1.pas</Transaction>
+    <Transaction>2021/02/24 21:21:28.000.183,=C:\Projetos\Zion\Forms\UFrmCadastroPadrao.pas</Transaction>
+    <Transaction>2021/02/24 21:23:55.000.011,=C:\Projetos\Zion\Forms\UFrmMensagem.pas</Transaction>
+    <Transaction>2021/02/24 21:34:33.000.373,=C:\Projetos\Zion\Forms\UFrmPesquisaProdutos.pas</Transaction>
+    <Transaction>2021/02/24 21:35:00.000.779,=C:\Projetos\Zion\Forms\UFrmPesquisaPadrao.pas</Transaction>
+    <Transaction>2021/02/24 21:38:02.000.904,=C:\Projetos\Zion\Forms\UFrmCadastroProdutos.pas</Transaction>
+    <Transaction>2021/02/26 21:17:01.000.636,=C:\Projetos\Zion\Forms\UFrmCadastroTipoBaixa.pas</Transaction>
+    <Transaction>2021/02/26 21:17:01.000.978,=C:\Projetos\Zion\Forms\UFrmPesquisaBaixaEstoque.pas</Transaction>
+    <Transaction>2021/02/26 21:17:01.000.445,=C:\Projetos\Zion\Forms\UfrmCadastroBaixaEstoque.pas</Transaction>
+    <Transaction>2021/02/26 21:17:02.000.207,=C:\Projetos\Zion\Forms\UFrmPesquisaTipoBaixa.pas</Transaction>
+    <Transaction>2021/02/26 21:17:02.000.494,=C:\Projetos\Zion\Forms\UFrmRelBaixas.pas</Transaction>
+  </Transactions>
+</BorlandProject>

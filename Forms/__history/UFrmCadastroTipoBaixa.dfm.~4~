@@ -1,0 +1,58 @@
+inherited frmTipoBaixa: TfrmTipoBaixa
+  Caption = 'frmTipoBaixa'
+  ClientHeight = 210
+  ClientWidth = 534
+  ExplicitWidth = 534
+  ExplicitHeight = 210
+  PixelsPerInch = 96
+  TextHeight = 21
+  inherited Panel1: TPanel
+    Width = 534
+    Caption = '       Tipos de Baixa'
+    ExplicitWidth = 534
+    inherited BtnExcluir: TButton
+      Left = 477
+      ExplicitLeft = 477
+    end
+    inherited BtnCancelar: TButton
+      Left = 425
+      ExplicitLeft = 425
+    end
+    inherited BtnSalvar: TButton
+      Left = 373
+      ExplicitLeft = 373
+    end
+  end
+  inherited PnlDados: TPanel
+    Width = 534
+    Height = 126
+    ExplicitWidth = 534
+    ExplicitHeight = 126
+    object Label2: TLabel
+      Left = 10
+      Top = 26
+      Width = 30
+      Height = 21
+      Caption = 'Tipo'
+      FocusControl = DBEdit2
+    end
+    object DBEdit2: TDBEdit
+      Left = 10
+      Top = 53
+      Width = 513
+      Height = 29
+      DataField = 'TIPO'
+      DataSource = dts
+      TabOrder = 0
+    end
+  end
+  inherited Panel2: TPanel
+    Top = 196
+    Width = 534
+    ExplicitTop = 196
+    ExplicitWidth = 534
+  end
+  inherited dts: TDataSource
+    DataSet = Tabelas.qryBaixa_Tipos
+  end
+end

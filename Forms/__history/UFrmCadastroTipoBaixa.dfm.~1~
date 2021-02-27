@@ -1,0 +1,11 @@
+inherited frmTipoBaixa: TfrmTipoBaixa
+  Caption = 'frmTipoBaixa'
+  ExplicitWidth = 577
+  ExplicitHeight = 301
+  PixelsPerInch = 96
+  TextHeight = 21
+  inherited Panel1: TPanel
+    Caption = '       Tipos de Baixa'
+    ExplicitTop = -6
+  end
+end

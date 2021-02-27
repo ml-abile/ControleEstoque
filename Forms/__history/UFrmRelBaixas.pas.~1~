@@ -1,0 +1,29 @@
+unit UFrmRelBaixas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UFrmCadastroPadrao, Vcl.StdCtrls,
+  Vcl.ComCtrls, Data.DB, System.Actions, Vcl.ActnList, Vcl.ExtCtrls;
+
+type
+  TfrmRelBaixas = class(TFrmCadastroPadrao)
+    DateTimePicker1: TDateTimePicker;
+    DateTimePicker2: TDateTimePicker;
+    Label2: TLabel;
+    Label1: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmRelBaixas: TfrmRelBaixas;
+
+implementation
+
+{$R *.dfm}
+
+end.

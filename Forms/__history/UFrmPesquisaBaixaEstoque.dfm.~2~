@@ -1,0 +1,8 @@
+inherited frmPesquisaBaixaEstoque: TfrmPesquisaBaixaEstoque
+  Caption = 'frmPesquisaBaixaEstoque'
+  PixelsPerInch = 96
+  TextHeight = 21
+  inherited Panel1: TPanel
+    Caption = '       Baixa de Estoque'
+  end
+end

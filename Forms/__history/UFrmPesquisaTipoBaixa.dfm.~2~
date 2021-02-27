@@ -1,0 +1,8 @@
+inherited frmPesquisaTipoBaixa: TfrmPesquisaTipoBaixa
+  Caption = 'frmPesquisaTipoBaixa'
+  PixelsPerInch = 96
+  TextHeight = 21
+  inherited dts: TDataSource
+    DataSet = Tabelas.qryBaixa_Tipos
+  end
+end
